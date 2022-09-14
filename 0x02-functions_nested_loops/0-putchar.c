@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * main - Entry point
- * description: program that print putchar
- * return: 0;
+ * Description: program that print _putchar
+ * Return: 0;
  */
 int main(void)
 {

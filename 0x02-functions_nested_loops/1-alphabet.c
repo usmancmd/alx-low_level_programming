@@ -6,17 +6,12 @@
  * Function alpha loop through the alphabet
  * Return: 0;
  */
-int main(void)
+void print_alphabet(void)
 {
-void alpha(void)
-{
-	char ch;
+	int ch;
 for (ch = 'a'; ch <= 'z'; ch++)
 {
 _putchar(ch);
+}
 _putchar('\n);
-}
-return (void);
-}
-return 0;
 }

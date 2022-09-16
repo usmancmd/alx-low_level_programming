@@ -1,7 +1,6 @@
-#include "holberton.h"
 #include "main.h"
 /**
- * print_line - prints an underscore: '_', n times
+ * print_line - prints an underscore
  * @n: the width of the line
  *
  * Return: void

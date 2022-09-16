@@ -1,20 +1,29 @@
 #include <stdio.h>
-/**
- * main - entry point
- * Return (0);
- */
-int main()
-{
-	int a;
+#include "main.h"
 
-	for (a = 1; a <= 100; a++)
+/**
+ * main - starting point of the program
+ *
+ * Return: void
+ */
+int main(void)
+{
+	int i;
+
+	for (i = 1; i <= 100; i++)
 	{
-		if (a = a / 3)
-		printf("Fizz");
-		else if (a = a / 5)
-		printf("Buzz")
-		else (a = a / 3 && a = a / 5)
-		printf("FizzBuzz")
-		printf(" ");
+		char fizz = i % 3 == 0;
+		char buzz = i % 5 == 0;
+
+		if (i != 1)
+			printf(" ");
+
+		if (fizz || buzz)
+			printf(fizz && buzz ? "FizzBuzz" : fizz ? "Fizz" : "Buzz");
+		else
+			printf("%d", i);
 	}
+	printf("\n");
+
+	return (0);
 }

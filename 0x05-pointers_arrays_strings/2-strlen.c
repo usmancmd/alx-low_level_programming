@@ -1,11 +1,16 @@
 #include "main.h"
+
 /**
-* _strlen - function
-* @s: param
-*
-* Return: 0
-*/
+ * _strlen - gets the length of s
+ * @s: char array
+ *
+ * Return: length of s
+ */
 int _strlen(char *s)
 {
-	_putchar(strlen(*s);
+	int i = 0;
+
+	while (*s++ != '\0')
+		i++;
+	return (i);
 }

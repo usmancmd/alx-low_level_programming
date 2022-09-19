@@ -1,20 +1,19 @@
 #include "main.h"
 
 /**
- * puts2 - prints evenly-indexed chars
- * @str: string to print
+ * puts_half - prints the later half of str
+ * @str: the string to print
  *
  * Return: void
  */
-void puts2(char *str)
+void puts_half(char *str)
 {
-	char even = 1;
+	int len = 0;
 
-	for ( ; *str != '\0'; str++)
-	{
-		if (even)
-			_putchar(*str);
-		even = !even;
-	}
+	while (*str++ != '\0')
+		len++;
+	str -= len / 2 + 1;
+	while (*str != '\0')
+		_putchar(*str++);
 	_putchar('\n');
 }

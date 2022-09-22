@@ -6,7 +6,7 @@
  * @src: string to add
  * @n: number of bytes
  *
- * Return: a pointer to the resulting string
+ * Return: dest
  */
 char *_strcat(char *dest, char *src, int n)
 {
@@ -18,7 +18,7 @@ char *_strcat(char *dest, char *src, int n)
 	while (dest[i] != '\0')
 		i++;
 
-	while (src[j] != '\0' && j <= n)
+	while (src[j] != '\0' && j < n)
 	{
 		dest[i] = src[j];
 		j++;

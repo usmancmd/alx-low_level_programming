@@ -13,7 +13,7 @@ char *rot13(char *s)
 
 	for (i = 0; s[i] != '\n'; i++)
 	{
-		for (j = 0; j != '\n'; j++)
+		for (j = 0; rot1[j] != '\n'; j++)
 		{
 			if (s[i] == rot1[j])
 			{

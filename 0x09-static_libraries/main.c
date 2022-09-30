@@ -10,7 +10,7 @@
  */
 int _putchar(char c)
 {
-	return (write(1, &c, 1));
+	
 }
 
 /**
@@ -21,7 +21,7 @@ int _putchar(char c)
  */
 int _islower(int c)
 {
-	return (c >= 'a' && c <= 'z');
+
 }
 
 /**
@@ -32,7 +32,7 @@ int _islower(int c)
  */
 int _isalpha(int c)
 {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+
 }
 
 /**
@@ -41,9 +41,9 @@ int _isalpha(int c)
  *
  * Return: the distance from 0 to x
  */
-int _abs(int x)
+int _abs(int n)
 {
-	return (x < 0 ? 0 - x : x);
+
 }
 
 /**
@@ -54,7 +54,7 @@ int _abs(int x)
  */
 int _isupper(int c)
 {
-	return (c >= 'A' && c <= 'Z');
+
 }
 
 /**
@@ -65,7 +65,7 @@ int _isupper(int c)
  */
 int _isdigit(int c)
 {
-	return (c >= '0' && c <= '9');
+
 }
 
 /**
@@ -76,11 +76,7 @@ int _isdigit(int c)
  */
 int _strlen(char *s)
 {
-	int i = 0;
 
-	while (*s++ != '\0')
-		i++;
-	return (i);
 }
 
 /**
@@ -89,11 +85,9 @@ int _strlen(char *s)
  *
  * Return: void
  */
-void _puts(char *str)
+void _puts(char *s)
 {
-	while (*str != '\0')
-		_putchar(*str++);
-	_putchar('\n');
+
 }
 
 /**
@@ -105,13 +99,7 @@ void _puts(char *str)
  */
 char *_strcpy(char *dest, char *src)
 {
-	register char *dest_tmp = dest;
 
-	while ((*dest_tmp++ = *src++))
-		continue;
-	*dest_tmp = '\0';
-
-	return (dest);
 }
 
 /**
@@ -122,23 +110,7 @@ char *_strcpy(char *dest, char *src)
  */
 int _atoi(char *s)
 {
-	int num = 0;
-	char negative = 0;
-	char allow_any = 1;
 
-	while (*s != '\0' && (allow_any || (*s >= '0' && *s <= '9')))
-	{
-		if (*s >= '0' && *s <= '9')
-		{
-			allow_any = 0;
-			num = num * 10 + (negative ? -(*s - '0') : (*s - '0'));
-		}
-		else if (*s == '-')
-			negative = !negative;
-		s++;
-	}
-
-	return (num);
 }
 
 /**
@@ -150,13 +122,7 @@ int _atoi(char *s)
  */
 char *_strcat(char *dest, char *src)
 {
-	char *dest_tmp = dest;
 
-	while (*dest)
-		++dest;
-	while ((*dest++ = *src++))
-		continue;
-	return (dest_tmp);
 }
 
 /**
@@ -169,16 +135,7 @@ char *_strcat(char *dest, char *src)
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	char *dest_tmp = dest;
 
-	while (*dest)
-		++dest;
-	while (n-- && (*dest = *src++))
-		++dest;
-	if (n == -1)
-		*dest = '\0';
-
-	return (dest_tmp);
 }
 
 /**
@@ -190,12 +147,7 @@ char *_strncat(char *dest, char *src, int n)
  */
 int _strcmp(char *s1, char *s2)
 {
-	int diff = 0;
 
-	while (*s1 && *s2 && !(diff = *s1++ - *s2++))
-		continue;
-
-	return (diff);
 }
 
 /**
@@ -208,11 +160,7 @@ int _strcmp(char *s1, char *s2)
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	char *s_tmp  = s;
 
-	while (n-- > 0)
-		*(s++) = b;
-	return (s_tmp);
 }
 
 /**
@@ -225,11 +173,7 @@ char *_memset(char *s, char b, unsigned int n)
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	char *dest_tmp = dest;
 
-	while (n-- > 0)
-		*dest++ = *src++;
-	return (dest_tmp);
 }
 
 /**
@@ -241,9 +185,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
  */
 char *_strchr(char *s, char c)
 {
-	while (*s && *s != c)
-		s++;
-	return (*s || c == 0 ? s : 0);
+
 }
 
 /**
@@ -255,14 +197,7 @@ char *_strchr(char *s, char c)
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i = 0;
-	char index[256] = {0};
 
-	while (*accept)
-		index[(int)*accept++] = 1;
-	while (*s && index[(int)*s++])
-		i++;
-	return (i);
 }
 
 /**
@@ -274,13 +209,7 @@ unsigned int _strspn(char *s, char *accept)
  */
 char *_strpbrk(char *s, char *accept)
 {
-	char index[256] = {0};
 
-	while (*accept)
-		index[(int)*accept++] = 1;
-	while (*s && !index[(int)*s])
-		++s;
-	return (*s ? s : 0);
 }
 
 /**
@@ -292,14 +221,5 @@ char *_strpbrk(char *s, char *accept)
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char *haystack_tmp = haystack, *needle_tmp = needle;
 
-	for (; *haystack; haystack = ++haystack_tmp, needle = needle_tmp)
-	{
-		while (*needle && *haystack && *needle == *haystack)
-			needle++, haystack++;
-		if (!*needle)
-			return (haystack_tmp);
-	}
-	return (0);
 }

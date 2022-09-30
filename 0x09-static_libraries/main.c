@@ -103,6 +103,19 @@ char *_strcpy(char *dest, char *src)
 }
 
 /**
+* _strncpy - copies n number of string from src to dest
+* @dest: array to copy to
+* @src: array to copy from
+* @n: number of string to copy
+*
+* Return: dest
+*/
+char *_strncpy(char *dest, char *src, int n)
+{
+
+}
+
+/**
  * _atoi - converts s to an integer
  * @s: string to convert
  *

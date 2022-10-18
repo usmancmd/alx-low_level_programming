@@ -1,4 +1,6 @@
+#include <stdio.h>
 #include <stdarg>
+
 /**
  * print_numbers - print numbers
  * @separator: to seperate parameters to print
@@ -20,9 +22,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		if (separator != NULL)
 		{
-		printf("%c", separator);
+		printf("%s", separator);
 		}
 	}
-printf('\n');
+printf("\n");
 va_end(num);
 }

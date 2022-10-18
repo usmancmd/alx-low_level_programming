@@ -26,5 +26,5 @@ va_start(num, n);
 
 va_end(num);
 
-return (sum_them_all);
+return (sum);
 }

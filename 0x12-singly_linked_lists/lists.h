@@ -18,6 +18,26 @@ typedef struct list_s
 } list_t;
 
 
+/**
+* _strlen - find string length
+* @str: string
+*
+* Return: length of string
+*/
+unsigned int _strlen(const char *str)
+{
+	unsigned int len, i = 0;
+
+	while (str[i] != '\0')
+        {
+		len = i;
+                i++;
+        }
+        return (len);
+}
+
+
+
 size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);
 list_t *add_node(list_t **head, const char *str);
